@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #authorization {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 220px;
+      height: 250px;
+      border: 2px solid black;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="authorization" onsubmit="return false;">
+    <label for="login">Логин:</label>
+    <input type="text" id="login"><br>
+    <label for="pwd">Пароль:</label>
+    <input type="password" id="pwd"><br>
+    <input type=submit id="submit" onclick="compareAuthData ()">
+    <div id="result"></div>
+  </form>
+
+  <script>
+    function compareAuthData() {
+      let login;
+      let password;
+      let result;
+      const credentials = { login: 'admin', password: 'qwerty', };
+
+      login = (document.getElementById("login").value).trim();
+      pwd = (document.getElementById("pwd").value).trim();
+
+      if ((login == credentials.login) && (pwd == credentials.password)) {
+        result = "<h2 style = \"color: green;\">Авторизация ok</h2>";
+      } else {
+        result = "<h2 style = \"color: red;\">Авторизация false</h2>";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>
