@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String: youtube</title>
+
+</head>
+
+<body>
+
+  <script>
+    const regExYoutube =
+      /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?/gm
+
+    const regExYoutube2 = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌ [\w\?‌ =]*)?/
+
+    let userLink = prompt('Введите ссылку видео').trim()
+    let result = userLink.match(regExYoutube)
+    let videoId = result.join().split('=')[1]
+    alert(videoId)
+    let str = `<iframe width="330px" height="200px" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen> </iframe>`
+    document.write(str)
+  </script>
+
+</body>
+
+</html>
