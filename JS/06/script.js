@@ -538,49 +538,100 @@ function table() {
   //   },
   // ]
 
-  const persons = [
-    {
-      Name: 'chevrolet chevelle malibu',
-      Cylinders: 8,
-      Displacement: 307,
-      Horsepower: 130,
-      Weight_in_lbs: 3504,
-      Origin: 'USA',
-    },
-    {
-      Name: 'buick skylark 320',
-      Miles_per_Gallon: 15,
-      Cylinders: 8,
-      Displacement: 350,
-      Horsepower: 165,
-      Weight_in_lbs: 3693,
-      Acceleration: 11.5,
-      Year: '1970-01-01',
-      vaz: {
-        Year: '1973-09-05',
-        Origin: 'USSR',
-        productionCity: 'Тольятти',
+  const persons = {
+    tagName: 'body',
+    children: [
+      {
+        tagName: 'div',
+        children: [
+          {
+            tagName: 'span',
+            children: 'Enter a data please:',
+          },
+          {
+            tagName: 'br/',
+          },
+          {
+            tagName: 'input',
+            attrs: {
+              type: 'text',
+              id: 'name',
+            },
+          },
+          {
+            tagName: 'input',
+            attrs: {
+              type: 'text',
+              id: 'surname',
+            },
+          },
+        ],
       },
-    },
-    {
-      Miles_per_Gallon: 18,
-      Cylinders: 8,
-      Displacement: 318,
-      Horsepower: 150,
-      Weight_in_lbs: 3436,
-      Year: '1970-01-01',
-      Origin: 'USA',
-    },
-    {
-      Name: 'amc rebel sst',
-      Miles_per_Gallon: 16,
-      Cylinders: 8,
-      Displacement: 304,
-      Horsepower: 150,
-      Year: '1970-01-01',
-      Origin: 'USA',
-    },
-  ]
+      {
+        tagName: 'div',
+        children: [
+          {
+            tagName: 'button',
+            attrs: {
+              id: 'ok',
+              children: 'OK',
+            },
+          },
+          {
+            tagName: 'button',
+            attrs: {
+              id: 'cancel',
+              children: 'Cancel',
+            },
+          },
+        ],
+      },
+    ],
+  }
+
+  // const persons = [
+  //   {
+  //     Name: 'chevrolet chevelle malibu',
+  //     Cylinders: 8,
+  //     Displacement: 307,
+  //     Horsepower: 130,
+  //     Weight_in_lbs: 3504,
+  //     Origin: 'USA',
+  //   },
+  //   {
+  //     Name: 'buick skylark 320',
+  //     Miles_per_Gallon: 15,
+  //     Cylinders: 8,
+  //     Displacement: 350,
+  //     Horsepower: 165,
+  //     Weight_in_lbs: 3693,
+  //     Acceleration: 11.5,
+  //     Year: '1970-01-01',
+  //     vaz: {
+  //       Year: '1973-09-05',
+  //       Origin: 'USSR',
+  //       productionCity: 'Тольятти',
+  //     },
+  //   },
+  //   {
+  //     Miles_per_Gallon: 18,
+  //     Cylinders: 8,
+  //     Displacement: 318,
+  //     Horsepower: 150,
+  //     Weight_in_lbs: 3436,
+  //     Year: '1970-01-01',
+  //     Origin: 'USA',
+  //   },
+  //   {
+  //     Name: 'amc rebel sst',
+  //     Miles_per_Gallon: 16,
+  //     Cylinders: 8,
+  //     Displacement: 304,
+  //     Horsepower: 150,
+  //     Year: '1970-01-01',
+  //     Origin: 'USA',
+  //   },
+  // ]
 
   const getKeys = obj => {
     let arr = Object.keys(obj)
@@ -606,6 +657,8 @@ function table() {
       for (j = 0; j < arrUniqueKey.length; j++) {
         obj[arrUniqueKey[j]] === undefined
           ? (arrOfValues[i][j] = '')
+          : typeof obj[arrUniqueKey[j]] === 'object'
+          ? (arrOfValues[i][j] = '{obj}')
           : (arrOfValues[i][j] = obj[arrUniqueKey[j]])
       }
       i++
