@@ -538,100 +538,131 @@ function table() {
   //   },
   // ]
 
-  const persons = {
-    tagName: 'body',
-    children: [
-      {
-        tagName: 'div',
-        children: [
-          {
-            tagName: 'span',
-            children: 'Enter a data please:',
-          },
-          {
-            tagName: 'br/',
-          },
-          {
-            tagName: 'input',
-            attrs: {
-              type: 'text',
-              id: 'name',
-            },
-          },
-          {
-            tagName: 'input',
-            attrs: {
-              type: 'text',
-              id: 'surname',
-            },
-          },
-        ],
-      },
-      {
-        tagName: 'div',
-        children: [
-          {
-            tagName: 'button',
-            attrs: {
-              id: 'ok',
-              children: 'OK',
-            },
-          },
-          {
-            tagName: 'button',
-            attrs: {
-              id: 'cancel',
-              children: 'Cancel',
-            },
-          },
-        ],
-      },
-    ],
-  }
-
-  // const persons = [
-  //   {
-  //     Name: 'chevrolet chevelle malibu',
-  //     Cylinders: 8,
-  //     Displacement: 307,
-  //     Horsepower: 130,
-  //     Weight_in_lbs: 3504,
-  //     Origin: 'USA',
+  // const persons = {
+  //   name: 'John',
+  //   age: 30,
+  //   hobbies: ['reading', 'sports'],
+  //   address: {
+  //     street: '123 Main St',
+  //     city: 'Anytown',
+  //     state: 'CA',
+  //     zip: '12345',
   //   },
-  //   {
-  //     Name: 'buick skylark 320',
-  //     Miles_per_Gallon: 15,
-  //     Cylinders: 8,
-  //     Displacement: 350,
-  //     Horsepower: 165,
-  //     Weight_in_lbs: 3693,
-  //     Acceleration: 11.5,
-  //     Year: '1970-01-01',
-  //     vaz: {
-  //       Year: '1973-09-05',
-  //       Origin: 'USSR',
-  //       productionCity: 'Тольятти',
+  //   job: {
+  //     title: 'Manager',
+  //     salary: 100000,
+  //     address: {
+  //       street: '456 Broad St',
+  //       city: 'Anytown',
+  //       state: 'CA',
+  //       zip: '12345',
   //     },
   //   },
-  //   {
-  //     Miles_per_Gallon: 18,
-  //     Cylinders: 8,
-  //     Displacement: 318,
-  //     Horsepower: 150,
-  //     Weight_in_lbs: 3436,
-  //     Year: '1970-01-01',
-  //     Origin: 'USA',
+  //   education: {
+  //     degree: "Bachelor's",
+  //     school: 'University of Anytown',
+  //     address: {
+  //       street: '789 College Ave',
+  //       city: 'Anytown',
+  //       state: 'CA',
+  //       zip: '12345',
+  //     },
   //   },
-  //   {
-  //     Name: 'amc rebel sst',
-  //     Miles_per_Gallon: 16,
-  //     Cylinders: 8,
-  //     Displacement: 304,
-  //     Horsepower: 150,
-  //     Year: '1970-01-01',
-  //     Origin: 'USA',
-  //   },
-  // ]
+  // }
+  // const persons = {
+  //   tagName: 'body',
+  //   children: [
+  //     {
+  //       tagName: 'div',
+  //       children: [
+  //         {
+  //           tagName: 'span',
+  //           children: 'Enter a data please:',
+  //         },
+  //         {
+  //           tagName: 'br/',
+  //         },
+  //         {
+  //           tagName: 'input',
+  //           attrs: {
+  //             type: 'text',
+  //             id: 'name',
+  //           },
+  //         },
+  //         {
+  //           tagName: 'input',
+  //           attrs: {
+  //             type: 'text',
+  //             id: 'surname',
+  //           },
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       tagName: 'div',
+  //       children: [
+  //         {
+  //           tagName: 'button',
+  //           attrs: {
+  //             id: 'ok',
+  //             children: 'OK',
+  //           },
+  //         },
+  //         {
+  //           tagName: 'button',
+  //           attrs: {
+  //             id: 'cancel',
+  //             children: 'Cancel',
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // }
+
+  const persons = [
+    {
+      Name: 'chevrolet chevelle malibu',
+      Cylinders: 8,
+      Displacement: 307,
+      Horsepower: 130,
+      Weight_in_lbs: 3504,
+      Origin: 'USA',
+    },
+    {
+      Name: 'buick skylark 320',
+      Miles_per_Gallon: 15,
+      Cylinders: 8,
+      Displacement: 350,
+      Horsepower: 165,
+      Weight_in_lbs: 3693,
+      Acceleration: 11.5,
+      Year: '1970-01-01',
+      vaz: {
+        Year: '1973-09-05',
+        Origin: 'USSR',
+        productionCity: 'Тольятти',
+      },
+    },
+    {
+      Miles_per_Gallon: 18,
+      Cylinders: 8,
+      Displacement: 318,
+      Horsepower: 150,
+      Weight_in_lbs: 3436,
+      Year: '1970-01-01',
+      Origin: 'USA',
+    },
+    {
+      Name: 'amc rebel sst',
+      Miles_per_Gallon: 16,
+      Cylinders: 8,
+      Displacement: 304,
+      Horsepower: 150,
+      Year: '1970-01-01',
+      Origin: 'USA',
+    },
+  ]
 
   const getKeys = obj => {
     let arr = Object.keys(obj)
@@ -650,18 +681,19 @@ function table() {
     let arr = Object.keys(obj)
     for (key of arr) {
       if (typeof obj[key] == 'object') {
+        i++
+        arrOfValues[i] = []
         getTableOfData(obj[key])
         continue
       }
-      arrOfValues[i] = []
-      for (j = 0; j < arrUniqueKey.length; j++) {
+
+      for (let j = 0; j < arrUniqueKey.length; j++) {
         obj[arrUniqueKey[j]] === undefined
           ? (arrOfValues[i][j] = '')
           : typeof obj[arrUniqueKey[j]] === 'object'
           ? (arrOfValues[i][j] = '{obj}')
           : (arrOfValues[i][j] = obj[arrUniqueKey[j]])
       }
-      i++
     }
   }
 
@@ -704,12 +736,11 @@ function table() {
 
   getKeys(persons) //вычитывает любую вложенность, записывает в массив уникальные поля внутри обьектов
 
-  let i = 1 //внешние счетчики  выносятся из-за рекурсии
-  let j = 0 //внешние счетчики
-
-  arrOfValues = [[...arrUniqueKey]] //Инициализация таблицы хедером
+  let i = 0 //внешние счетчики  выносятся из-за рекурсии
 
   getTableOfData(persons) //заполнение результирующей таблицы arrOfValues
+
+  arrOfValues.unshift(arrUniqueKey) //Добавление  хедера
 
   let result = htmlString(arrOfValues) //построение HTML таблицы
 
