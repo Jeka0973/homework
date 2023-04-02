@@ -1,0 +1,25 @@
+<input type='number' id="firstNumber" />
+<input type='number' id="secondNumber" />
+<div id="divisionResult">
+
+</div>
+<script>
+  const calcResult = () => {
+    let inputNumber1 = Number(firstNumber.value)
+    let inputNumber2 = Number(secondNumber.value)
+    inputNumber1 = Math.round(inputNumber1)
+    inputNumber2 = Math.round(inputNumber2)
+    if (inputNumber1 && inputNumber2) {
+      if (inputNumber1 % inputNumber2) {
+        divisionResult.innerHTML = `Числа  ${inputNumber1} и ${inputNumber2} не делятся нацело!`
+      } else {
+        divisionResult.innerHTML = `Числа  ${inputNumber1} и ${inputNumber2} делятся нацело!`
+      }
+    } else {
+      divisionResult.innerHTML = `Введите значения от 1 и выше!!`
+    }
+  }
+
+  firstNumber.oninput = secondNumber.oninput = calcResult
+
+</script>
