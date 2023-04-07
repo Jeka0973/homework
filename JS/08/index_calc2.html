@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    #from,
+    #to,
+    #rate,
+    #result {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency</title>
+</head>
+
+<body>
+  <div id="selectResult">
+    <h1>Currency calculator</h1>
+    <br>
+    <label for="from">from currency</label>
+    <select id="from" onchange="selectedOption()">
+    </select>
+
+    <label for="to">to Currency</label>
+    <select id="to" onchange="selectedOption()">
+    </select>
+
+    <div>
+      <br><span>rate:&nbsp</span><span id="rate"></span>
+    </div>
+    <div>
+      <br>
+      <label for="amount">amount</label>
+      <input type="number" id="amount" value=1 onchange="selectedOption()">
+    </div>
+    <div>
+      <br>
+      <span>result:&nbsp</span><span id="result"></span>
+    </div>
+  </div>
+
+  <script src="closure_calc2.js"></script>
+</body>
+
+</html>
