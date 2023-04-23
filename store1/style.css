@@ -1,0 +1,263 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(29, 148, 128);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(243, 243, 243);
+  color: rgb(29, 148, 128);
+}
+
+/* .headerItems ul li {
+  display: inline-block;
+  font-weight: bold;
+} */
+
+.headerText {
+  font-weight: bold;
+  font-size: 80px;
+  font-family: 'Amatic SC', cursive;
+  margin-right: 100px;
+}
+
+.kassa {
+  text-align: center;
+  margin-right: 50px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+}
+#cashLeft {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* *************** */
+
+main {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* .leftAside {
+  display: flex;
+  flex: 0 0 210px;
+  justify-content: center;
+  padding-top: 15px;
+  order: -1;
+  background-color: rgb(199, 152, 185);
+}
+
+.rightAside {
+  display: flex;
+  flex: 0 0 210px;
+  justify-content: center;
+  padding-top: 15px;
+  background-color: rgb(156, 177, 199);
+} */
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  margin: 15px;
+}
+
+.contentHeader {
+  text-align: center;
+  font-size: 14pt;
+  padding: 0 10px 10px;
+}
+.contentHeader h2 {
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.contentBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.goods1 {
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+  color: rgb(29, 148, 128);
+}
+
+#beerLeft,
+#chipsLeft,
+#sigiLeft {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+#beerPrice,
+#chipsPrice,
+#sigiPrice {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(205, 43, 14);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-basis: calc(100% / 3 - 15px);
+  min-width: 230px;
+  /* min-height: 150px; */
+  height: 350px;
+  align-items: center;
+  border: 0px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: ease-out 0.5s;
+}
+
+.card1 div:nth-child(1) {
+  border: 0px solid rgb(208, 208, 208);
+  width: 150px;
+  height: 140px;
+  border-radius: 8%;
+  background: url(Img/beer.png);
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+.card2 div:nth-child(1) {
+  border: 0px solid rgb(208, 208, 208);
+  width: 150px;
+  height: 140px;
+  border-radius: 5%;
+  background: url(Img/chips.png);
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+.card3 div:nth-child(1) {
+  border: 0px solid rgb(208, 208, 208);
+  width: 150px;
+  height: 140px;
+  border-radius: 5%;
+  background: url(Img/sigi.png);
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+.card div:nth-child(2) {
+  margin-bottom: 15px;
+}
+
+.card div:nth-child(3) {
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card div:nth-child(4) button {
+  background-color: rgb(104, 81, 116);
+  border: 3px solid rgb(104, 81, 116);
+  width: 70px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease-out 0.3s;
+  box-shadow: 0.2em 0.2em 0px rgba(122, 122, 122, 0.6);
+}
+
+.card div:nth-child(4) button:active {
+  background-color: rgb(155, 121, 173);
+  border: 3px solid rgb(155, 121, 173);
+  box-shadow: none;
+}
+
+.card:hover {
+  background-color: rgb(230, 230, 230);
+  border: 0px solid rgb(160, 160, 160);
+  box-shadow: 0.4em 0.4em 0px rgba(122, 122, 122, 0.4);
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: ease-out 0.5s;
+}
+
+.storeMain {
+  margin-top: 10px;
+  border: 3px, solid, black;
+  display: flex;
+  justify-content: space-between;
+}
+.buyButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#buyIt {
+  width: 200px;
+  height: 60px;
+
+  /* border-radius: 4px; */
+  font-size: 36px;
+
+  /* border-color: rgb(215, 214, 213); */
+  /* color: #7d7979; */
+  box-shadow: 0.2em 0.2em 4px rgba(122, 122, 122, 0.2);
+  /* border: none; */
+}
+#buyIt:active {
+  box-shadow: none;
+}
+
+#goods,
+#amountOfGoods,
+#money {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: rgb(19, 89, 77);
+  box-shadow: 0.2em 0.2em 4px rgba(122, 122, 122, 0.2);
+  border: none;
+}
+/* **************** */
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  background-color: rgb(243, 243, 243);
+  color: rgb(29, 148, 128);
+}
+.footerContent {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: larger;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+}
