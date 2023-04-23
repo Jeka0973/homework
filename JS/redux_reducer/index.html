@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title id="titleCash"></title>
+    <link rel="icon"
+        href="https://camo.githubusercontent.com/eb8b5f9caa4b4765b222e961729eadb775ac710b/68747470733a2f2f67617265766e612e6769746875622e696f2f6a732d73616d706c65732f696d616765732f612d6c6576656c2d69636f2e706e67">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="headerLogo">
+            <img src="Img/Logo2.png" alt="Logo">
+        </div>
+        <div>
+            <span class="headerText"> МАГаЗИНчИК маленьких РАДОСТЕЙ </span>
+        </div>
+        <div class="kassa">
+            <span>Мы заработали</span><br>
+            <span id="cashLeft"></span>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="contentHeader">
+                <br>
+
+                <h2>КУПИ все ТРИ</h2>
+            </div>
+
+            <section class="contentBody">
+                <div class="card card1">
+                    <div></div>
+
+                    <div class="goods1">
+                        <h2>ПИВО</h2>
+                        <br>
+                        <span id="beerLeft"></span><span>шт /&nbsp</span>
+                        <span id="beerPrice"></span><span>uah</span>
+                    </div>
+                    <div>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- <div><button>Go</button></div> -->
+                </div>
+
+
+                <div class="card card2">
+                    <div></div>
+                    <div class="goods1">
+                        <h2>ЧИПСИКИ</h2>
+                        <br>
+                        <span id="chipsLeft"></span><span>шт /&nbsp</span>
+                        <span id="chipsPrice"></span><span>uah</span>
+                    </div>
+                    <div>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- <div><button>Go</button></div> -->
+                </div>
+
+                <div class="card card3">
+                    <div></div>
+                    <div class="goods1">
+                        <h2>И ПОКУРИТЬ)</h2>
+                        <br>
+                        <span id="sigiLeft"></span><span>пач. /&nbsp</span>
+                        <span id="sigiPrice"></span><span>uah</span>
+                    </div>
+                    <div>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- <div><button>Go</button></div> -->
+                </div>
+
+
+
+            </section>
+
+            <div class="storeMain">
+
+                <select id="goods">
+                </select>
+
+
+                <input type="text" id="amountOfGoods" placeholder="Кол-во">
+
+
+                <input type="text" id="money" placeholder="Деньга тут)">
+
+            </div>
+            <div class="buyButton">
+                <input type="button" id="buyIt" value="Купить">
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footerContent">
+            <p>&#169 &nbsp2023</p>
+        </div>
+    </footer>
+    <script src="redstore.js"></script>
+</body>
+
+</html>
