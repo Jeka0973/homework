@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Form</title>
+  <style>
+    body {
+      background-color: rgb(207, 232, 241);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgb(97, 97, 97);
+    }
+
+    label {
+      color: rgb(72, 72, 244);
+
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    input {
+      height: 35px;
+      width: 300px;
+      font-size: 18px;
+
+      color: rgb(107, 107, 107);
+      border-color: rgba(50, 50, 50, 0.397);
+
+    }
+
+
+    #selection {
+      height: 30px;
+      width: 200px;
+      font-size: 16px;
+      color: rgb(136, 136, 136);
+      border-color: rgba(50, 50, 50, 0.397);
+
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Работает для obj с set - get, если get без set -> input.readOnly </h2>
+  <div>
+
+    <select id='selection'>
+      <option value="person">Person</option>
+      <option value="car">Car</option>
+    </select>
+    <br>
+    <br>
+    <br>
+  </div>
+  <div id="personData">
+
+
+  </div>
+
+
+  <script src="person_form.js"></script>
+</body>
+
+</html>
