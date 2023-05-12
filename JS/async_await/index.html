@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>domEventPromise</title>
+</head>
+
+<body>
+  <button id="button">OK</button>
+  <script>
+    function domEventPromise(element, eventName) {
+      return new Promise(function (resolve) {
+
+        function executor(event) {
+          element.removeEventListener(eventName, executor);
+          resolve(event);
+        }
+        element.addEventListener(eventName, executor);
+      });
+    }
+
+    domEventPromise(button, 'click')
+      .then(event => console.log('Event click happens!', event));
+  </script>
+</body>
+
+</html>
