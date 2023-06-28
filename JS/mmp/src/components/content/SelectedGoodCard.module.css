@@ -1,0 +1,36 @@
+.oneGood {
+  margin: 2px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #c8e1e2; */
+  max-width: 60%;
+  min-width: 300px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0.3em 0.3em 15px rgba(122, 122, 122, 0.3);
+}
+
+.slidePos {
+  display: flex;
+  box-sizing: border-box;
+  /* flex-basis: calc(100% / 2 - 115px); */
+  max-width: 370px;
+  min-height: 220px;
+  font-family: 'Open Sans';
+  align-items: center;
+  min-width: 0;
+}
+.goodName,
+.descr,
+.goodPrice,
+.goodSale button {
+  padding-bottom: 10px;
+}
+
+.goodPrice {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #8e2cfd;
+}

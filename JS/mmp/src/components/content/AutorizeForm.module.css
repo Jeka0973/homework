@@ -1,0 +1,27 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+  padding: 15px;
+  /* border: 1px solid #c8e1e2; */
+  min-width: 315px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0.3em 0.3em 15px rgba(122, 122, 122, 0.3);
+}
+
+label,
+.chkBoxPwd,
+button {
+  margin: 15px;
+}
+
+.pwdInput,
+.loginInput {
+  width: 130px;
+  margin: 5px 0;
+}
+
+.authForm > div:nth-child(1) {
+  text-align: left;
+}
